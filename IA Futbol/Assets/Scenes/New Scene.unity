@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -179,8 +179,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &17691083 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -225,8 +225,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &17752539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -277,8 +277,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &18307913
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 18307916}
   - component: {fileID: 18307915}
   - component: {fileID: 18307914}
+  - component: {fileID: 18307918}
   m_Layer: 9
   m_Name: Campo
   m_TagString: Untagged
@@ -374,6 +375,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &18307918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18307913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/AmbienteEstadio
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &91468772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -418,8 +442,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &96278728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -464,8 +488,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &125981042
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,8 +619,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &224958245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -865,8 +889,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &237885835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,8 +1182,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &315308278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1832,8 +1856,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &484234447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1864,6 +1888,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -2040,6 +2069,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -2290,6 +2324,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -2795992136151402285, guid: 20efdc33aa4eee84c887d404d5247d63, type: 3}
     - {fileID: 1494122164968540319, guid: 20efdc33aa4eee84c887d404d5247d63, type: 3}
+    - {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 20efdc33aa4eee84c887d404d5247d63, type: 3}
 --- !u!1001 &538781056
 PrefabInstance:
@@ -2321,6 +2356,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -3010,8 +3050,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &724290401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +3458,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -4182,8 +4227,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &988120811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4713,8 +4758,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!4 &1113973376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6996684534773551559, guid: ecb9f435d25366845b79c1a603629371,
@@ -5492,6 +5537,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6684631060975200857, guid: 0cd3f0c97d2a1ba4186c352562f05efa, type: 3}
     - {fileID: -2795992136151402285, guid: 0cd3f0c97d2a1ba4186c352562f05efa, type: 3}
+    - {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0cd3f0c97d2a1ba4186c352562f05efa, type: 3}
 --- !u!1001 &1545523482
 PrefabInstance:
@@ -5523,6 +5569,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -5687,8 +5738,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &1601112147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5714,6 +5765,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -5955,8 +6011,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &1665948132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5987,6 +6043,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -6288,8 +6349,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &1795217434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 20efdc33aa4eee84c887d404d5247d63,
@@ -6334,8 +6395,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &1818056933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6554,8 +6615,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &1861242243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6581,6 +6642,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -7054,8 +7120,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!4 &1932051097 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -7299,6 +7365,11 @@ PrefabInstance:
     - target: {fileID: 2419525123366756965, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
         type: 3}
       propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801305691184226714, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -7675,8 +7746,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &2143516344 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 20efdc33aa4eee84c887d404d5247d63,
@@ -7721,8 +7792,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1001 &5667669924711125438
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -62,9 +62,11 @@ public class Ball : MonoBehaviour
                 FootBallPlayer owner = GameManager.getInstance().getBallOwner();
                 if (owner != null)
                 {
+                    owner.GetComponent<FMODUnity.StudioListener>().enabled = false;
                     owner.setHasBall(null);
                     owner.stun();
                 }
+                player.GetComponent<FMODUnity.StudioListener>().enabled = true;
                 player.setHasBall(this);
                 //si estábamos esperando un pase dejamos de esperar
                 if (player.getWaitingForPass())
