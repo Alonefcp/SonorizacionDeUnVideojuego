@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{7165a3da-eaf7-4f46-978b-8d97ae4860d6}">
+		<property name="assetPath">
+			<value>Jugadores/kick1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1705895691609978</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{cfaccee0-c85f-4b1b-859e-c3df5c40f93e}</destination>
+		</relationship>
+	</object>
+</objects>

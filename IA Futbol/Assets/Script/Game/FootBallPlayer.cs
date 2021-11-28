@@ -112,6 +112,9 @@ public class FootBallPlayer : MonoBehaviour
         //Si el agente tiene la pelota y puede tirar aplicamos un empuje en la dirección de tiro de fuerza proporcional a la distancia y a una constante
         if (hasBall && shootDirection != Vector3.zero)
         {
+            //Se ejecuta el sonido de tiro(es el mismo que el de pase)
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SonidoPase");
+
             transform.LookAt(shootDirection + transform.position);
             myBall.transform.position = transform.position + transform.forward;
             Rigidbody ballrb = myBall.GetComponent<Rigidbody>();
@@ -135,6 +138,9 @@ public class FootBallPlayer : MonoBehaviour
             //Si realmente se tiene la bola se mira hacia el compañero y se aplica un impulso proporcional a la distancia y a una constante
             if (hasBall)
             {
+                //Se ejecuta el sonido de pase
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SonidoPase");
+
                 Rigidbody ballrb = myBall.GetComponent<Rigidbody>();
                 transform.LookAt(mate.transform.position);
                 myBall.transform.position = transform.position + transform.forward;
