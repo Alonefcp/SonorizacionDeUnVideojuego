@@ -29,9 +29,14 @@ public class FootBallPlayer : MonoBehaviour
     Vector3 initialPos;
     Vector3 shootDirection;
 
+    //Fmod
+    private FMOD.Studio.EventInstance instance;
+    FMODUnity.StudioListener listener;
+
 
     private void Start()
     {
+        listener = GetComponent<FMODUnity.StudioListener>();
         initialPos = transform.position;
         team = GameManager.getInstance().getTeam(myTeam);
         limitAttackX = GameManager.getInstance().getAttackZone(myTeam, myRol);
@@ -112,12 +117,21 @@ public class FootBallPlayer : MonoBehaviour
         //Si el agente tiene la pelota y puede tirar aplicamos un empuje en la dirección de tiro de fuerza proporcional a la distancia y a una constante
         if (hasBall && shootDirection != Vector3.zero)
         {
-            //Se ejecuta el sonido de tiro(es el mismo que el de pase)
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SonidoPase");
+            //Se ejecuta el sonido de tiro(es el mismo que el de pase)                                    
+            instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidoPase");
+            instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+
+            instance.setParameterByName("Fuerza", shootDirection.magnitude / 30.0f);
+            instance.start();
+            instance.release();
 
             transform.LookAt(shootDirection + transform.position);
             myBall.transform.position = transform.position + transform.forward;
             Rigidbody ballrb = myBall.GetComponent<Rigidbody>();
+            
+
+            instance.start();
+
             ballrb.AddForce(shootDirection.normalized * ShootPower * shootDirection.magnitude, ForceMode.Impulse);
             //Se avisa de que la pelota está en el aire para evitar pasar a estado sin balón
             myBall.setBallOnAir(true);
@@ -138,8 +152,15 @@ public class FootBallPlayer : MonoBehaviour
             //Si realmente se tiene la bola se mira hacia el compañero y se aplica un impulso proporcional a la distancia y a una constante
             if (hasBall)
             {
-                //Se ejecuta el sonido de pase
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SonidoPase");
+                //Se ejecuta el sonido de pase                
+                instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidoPase");
+                instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+                instance.setParameterByName("Fuerza", dir.magnitude/30.0f);
+                Debug.Log(dir.magnitude/30.0f);
+
+                instance.start();
+                instance.release();
+
 
                 Rigidbody ballrb = myBall.GetComponent<Rigidbody>();
                 transform.LookAt(mate.transform.position);
@@ -178,10 +199,12 @@ public class FootBallPlayer : MonoBehaviour
             GameManager.getInstance().setBallOwner(this);
             timeWaiting = 0;
             waitingForPass = false;
+            listener.enabled = true;
         }
         else
         {
             GameManager.getInstance().setBallOwner(null);
+            listener.enabled = false;
         }
         myBall = ball;
     }

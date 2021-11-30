@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{39ade874-d6db-46fe-b85e-d2477334f943}">
+		<property name="assetPath">
+			<value>Arbitro/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{cfaccee0-c85f-4b1b-859e-c3df5c40f93e}</destination>
+		</relationship>
+	</object>
+</objects>

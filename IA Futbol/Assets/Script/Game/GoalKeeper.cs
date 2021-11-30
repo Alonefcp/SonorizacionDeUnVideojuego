@@ -8,6 +8,9 @@ public class GoalKeeper : MonoBehaviour
     NavMeshAgent navmesh;
     Vector3 initialPos;
 
+    //Fmod
+    private FMOD.Studio.EventInstance instance;
+
     private void Start()
     {
         goal = GetComponent<Collider>();
@@ -29,5 +32,18 @@ public class GoalKeeper : MonoBehaviour
     public void reset()
     {
         transform.position = initialPos;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Si el portero choca con la pelota se ejecuta el sonido de parada
+        if(collision.gameObject.GetComponent<Ball>()!=null)
+        {
+            instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidoPortero");
+            instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+           
+            instance.start();
+            instance.release();
+        }
     }
 }

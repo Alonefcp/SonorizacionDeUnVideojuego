@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -179,8 +179,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &17691083 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -225,8 +225,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &17752539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -277,8 +277,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &18307913
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,8 +442,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &96278728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -488,8 +488,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &125981042
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,8 +619,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &224958245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -726,6 +726,11 @@ PrefabInstance:
     - target: {fileID: 3369482528482194035, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
@@ -889,8 +894,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &237885835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,8 +1187,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &315308278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1856,8 +1861,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &484234447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2978,6 +2983,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_Speed
@@ -3050,8 +3060,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &724290401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,6 +3695,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_Speed
@@ -4227,8 +4242,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &988120811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4431,6 +4446,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_Speed
@@ -4564,6 +4584,11 @@ PrefabInstance:
     - target: {fileID: 3369482528482194035, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
@@ -4758,8 +4783,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!4 &1113973376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6996684534773551559, guid: ecb9f435d25366845b79c1a603629371,
@@ -4993,6 +5018,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_Speed
@@ -5127,6 +5157,11 @@ PrefabInstance:
     - target: {fileID: 3369482528482194035, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
@@ -5738,8 +5773,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &1601112147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6011,8 +6046,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &1665948132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6276,6 +6311,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_Speed
@@ -6349,8 +6389,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &1795217434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 20efdc33aa4eee84c887d404d5247d63,
@@ -6395,8 +6435,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &1818056933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6615,8 +6655,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &1861242243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6953,6 +6993,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_Speed
@@ -7120,8 +7165,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!4 &1932051097 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3369482528482194035, guid: 0cd3f0c97d2a1ba4186c352562f05efa,
@@ -7674,6 +7719,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4327269911632643300, guid: 20efdc33aa4eee84c887d404d5247d63,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6591135366604932602, guid: 20efdc33aa4eee84c887d404d5247d63,
         type: 3}
       propertyPath: m_Speed
@@ -7746,8 +7796,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1 &2143516344 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7603920269577693899, guid: 20efdc33aa4eee84c887d404d5247d63,
@@ -7792,8 +7842,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!1001 &5667669924711125438
 PrefabInstance:
   m_ObjectHideFlags: 0

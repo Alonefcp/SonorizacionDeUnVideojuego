@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance = null;
 
+    //Fmod
+    private FMOD.Studio.EventInstance instance;
+
     void Awake()
     {
         if (_instance == null)
@@ -90,6 +93,11 @@ public class GameManager : MonoBehaviour
 
     public void Goal(Team team)
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Pitido");
+        instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));       
+        instance.start();
+        instance.release();
+
         //Al marcar la bola no está en el aire
         ball.setBallOnAir(false);
 
