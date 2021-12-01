@@ -11,6 +11,8 @@ public class Ball : MonoBehaviour
     const float maxBallOnAirTime = 1;
     float timeOnAir = 0;
     bool ballOnAir = true;
+    FootBallPlayer lastPlayer = null;
+
     public void setBallOnAir(bool ballMoving)
     {
         ballOnAir = ballMoving;
@@ -46,6 +48,8 @@ public class Ball : MonoBehaviour
         ballOnAir = false;
         timeOnAir = 0;
     }
+
+    public void setLastPlayer(FootBallPlayer player) { lastPlayer = player; }
     private void OnCollisionEnter(Collision collision)
     {
         if (LayerMask.GetMask(LayerMask.LayerToName(collision.gameObject.layer)) != campoLayer)
@@ -56,6 +60,9 @@ public class Ball : MonoBehaviour
             //si el jugador receptor no está aturdido cogerá la pelota
             if (player && !player.isStunned())
             {
+                if(lastPlayer != null)  lastPlayer.gameObject.GetComponent<FMODUnity.StudioListener>().enabled = false;
+                lastPlayer = player;
+                player.gameObject.GetComponent<FMODUnity.StudioListener>().enabled = true;
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 //Si ya tenía la pelota otro jugador se la quitamos y lo aturdimos
@@ -65,7 +72,6 @@ public class Ball : MonoBehaviour
                     owner.setHasBall(null);
                     owner.stun();
                 }
-
                 player.setHasBall(this);
                 //si estábamos esperando un pase dejamos de esperar
                 if (player.getWaitingForPass())

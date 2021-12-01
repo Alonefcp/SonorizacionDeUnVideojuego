@@ -128,13 +128,11 @@ public class FootBallPlayer : MonoBehaviour
             transform.LookAt(shootDirection + transform.position);
             myBall.transform.position = transform.position + transform.forward;
             Rigidbody ballrb = myBall.GetComponent<Rigidbody>();
-            
-
-            instance.start();
 
             ballrb.AddForce(shootDirection.normalized * ShootPower * shootDirection.magnitude, ForceMode.Impulse);
             //Se avisa de que la pelota está en el aire para evitar pasar a estado sin balón
             myBall.setBallOnAir(true);
+            myBall.setLastPlayer(this);
             setHasBall(null);
             //Avisamos a un portero para que se tire a un lugar aleatorio
             GameManager.getInstance().notifyGoalKeeper(myTeam);
@@ -156,11 +154,8 @@ public class FootBallPlayer : MonoBehaviour
                 instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidoPase");
                 instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
                 instance.setParameterByName("Fuerza", dir.magnitude/30.0f);
-                Debug.Log(dir.magnitude/30.0f);
-
                 instance.start();
                 instance.release();
-
 
                 Rigidbody ballrb = myBall.GetComponent<Rigidbody>();
                 transform.LookAt(mate.transform.position);
@@ -168,6 +163,7 @@ public class FootBallPlayer : MonoBehaviour
                 //Se avisa de que la pelota está en el aire para evitar pasar a estado sin balón
                 myBall.setBallOnAir(true);
                 ballrb.AddForce(dir.normalized * dir.magnitude * PassPower, ForceMode.Impulse);
+                myBall.setLastPlayer(this);
                 setHasBall(null);
             }
         }
@@ -199,12 +195,12 @@ public class FootBallPlayer : MonoBehaviour
             GameManager.getInstance().setBallOwner(this);
             timeWaiting = 0;
             waitingForPass = false;
-            listener.enabled = true;
+            //listener.enabled = true;
         }
         else
         {
             GameManager.getInstance().setBallOwner(null);
-            listener.enabled = false;
+            //listener.enabled = false;
         }
         myBall = ball;
     }

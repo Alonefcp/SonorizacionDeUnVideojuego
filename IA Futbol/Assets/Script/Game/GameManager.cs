@@ -10,8 +10,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance = null;
 
-    //Fmod
-    private FMOD.Studio.EventInstance instance;
+    private Team winner;
 
     void Awake()
     {
@@ -93,10 +92,7 @@ public class GameManager : MonoBehaviour
 
     public void Goal(Team team)
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Pitido");
-        instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));       
-        instance.start();
-        instance.release();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Pitido");
 
         //Al marcar la bola no está en el aire
         ball.setBallOnAir(false);
@@ -114,13 +110,22 @@ public class GameManager : MonoBehaviour
             foreach (HiveMind mind in hiveMinds)
             {
                 mind.gameObject.SetActive(false);
-                mind.gameObject.SetActive(false);
             }
             
         }
         //en caso de seguir el juego se resetean las posiciones y estado de los agentes y la bola
         else
-            resetGame(team);
+        {
+            teamA.gameObject.SetActive(false);
+            teamB.gameObject.SetActive(false);
+            foreach (HiveMind mind in hiveMinds)
+            {
+                mind.gameObject.SetActive(false);
+            }
+
+            winner = team;
+            Invoke("resetMatch", 3);
+        }
     }
 
     public List<FootBallPlayer> getTeam(Team team)
@@ -168,23 +173,30 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    void resetGame(Team t)
+    void resetMatch()
     {
+        teamA.gameObject.SetActive(true);
+        teamB.gameObject.SetActive(true);
+        foreach (HiveMind mind in hiveMinds)
+        {
+            mind.gameObject.SetActive(true);
+        }
+
         foreach (FootBallPlayer player in TeamAPlayers)
         {
             //se le manda al jugador como bool para aparecer retrasado que el equipo que ha marcado no ha sido el suyo
-            player.reset(t != Team.Nobody && Team.TeamA != t);
+            player.reset(winner != Team.Nobody && Team.TeamA != winner);
         }
         foreach (FootBallPlayer player in TeamBPlayers)
         {
-            player.reset(t != Team.Nobody && Team.TeamB != t);
+            player.reset(winner != Team.Nobody && Team.TeamB != winner);
         }
         
         goalKeeperTeamA.reset();
         goalKeeperTeamB.reset();
         ball.reset();
       //usaremos nobody como valor especial para indicar que se resetee el estado del juego en general
-        if (t == Team.Nobody)
+        if (winner == Team.Nobody)
         {
             for (int i = 0; i < 2; i++)
             {
@@ -194,6 +206,7 @@ public class GameManager : MonoBehaviour
             WinnerText.text = "";
         }
     }
+
     /// <summary>
     /// Se reactiva todo lo que se desactivó al ganar y se resetea el juego
     /// </summary>
@@ -206,7 +219,8 @@ public class GameManager : MonoBehaviour
             if (!hiveMind.gameObject.activeSelf)
                 hiveMind.gameObject.SetActive(true);
         }
-        resetGame(Team.Nobody);
+        winner = Team.Nobody;
+        resetMatch();
      }
 
     public Collider getCampo() { return campo; }

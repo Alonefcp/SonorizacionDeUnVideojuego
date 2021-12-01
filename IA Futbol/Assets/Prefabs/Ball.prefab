@@ -63,6 +63,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85bbff0a9501ec40a1fde7c015ed60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  campoLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!135 &99572770323007496
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -99,6 +102,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -123,3 +127,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
