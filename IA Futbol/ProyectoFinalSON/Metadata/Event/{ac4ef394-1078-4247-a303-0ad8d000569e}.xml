@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{ac4ef394-1078-4247-a303-0ad8d000569e}">
 		<property name="name">
-			<value>SonidoPase</value>
+			<value>SonidosPasesYTiros</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>

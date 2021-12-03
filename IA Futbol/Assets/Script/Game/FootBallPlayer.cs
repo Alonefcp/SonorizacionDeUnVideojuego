@@ -117,10 +117,9 @@ public class FootBallPlayer : MonoBehaviour
         //Si el agente tiene la pelota y puede tirar aplicamos un empuje en la dirección de tiro de fuerza proporcional a la distancia y a una constante
         if (hasBall && shootDirection != Vector3.zero)
         {
-            //Se ejecuta el sonido de tiro(es el mismo que el de pase)                                    
-            instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidoPase");
+            //Se ejecuta el sonido de tiro                                    
+            instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidosPasesYTiros");
             instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-
             instance.setParameterByName("Fuerza", shootDirection.magnitude / 30.0f);
             instance.start();
             instance.release();
@@ -151,7 +150,7 @@ public class FootBallPlayer : MonoBehaviour
             if (hasBall)
             {
                 //Se ejecuta el sonido de pase                
-                instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidoPase");
+                instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidosPasesYTiros");
                 instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
                 instance.setParameterByName("Fuerza", dir.magnitude/30.0f);
                 instance.start();

@@ -91,19 +91,22 @@ public class GameManager : MonoBehaviour
     }
 
     public void Goal(Team team)
-    {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Pitido");
-
+    {       
         //Al marcar la bola no está en el aire
         ball.setBallOnAir(false);
 
         uint teamN = (uint)team;
         //Se castea el equipo al que han marcado a entero y se le suma gol
         goals[teamN]++;
+        //Se ejecuta el sonido de cuando se marca un gol
+        if (goals[teamN] < MaxGoals) FMODUnity.RuntimeManager.PlayOneShot("event:/PitidoGol");
         teams[teamN].text = goals[teamN].ToString();
         //Si a uno de los equipos le han marcado el máximo de goles ha ganado el contrario. Se desactivan los jugadores y las IA multicapa
         if (goals[teamN] >= MaxGoals)
         {
+            //Se ejecuta el sonido de cuando se acaba el partido
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PitidoFinalPartido");
+
             WinnerText.text = "Gana " + names[1 - teamN];
             teamA.gameObject.SetActive(false);
             teamB.gameObject.SetActive(false);
