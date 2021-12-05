@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 public class GoalKeeper : MonoBehaviour
 {
+    [SerializeField] uint teamN; //0 azul , 1 rojo
+    [SerializeField] Transform gradasEquipoAzul;
+    [SerializeField] Transform gradasEquipoRojo;
     [SerializeField] Collider goal;
     NavMeshAgent navmesh;
     Vector3 initialPos;
@@ -40,10 +43,18 @@ public class GoalKeeper : MonoBehaviour
         if(collision.gameObject.GetComponent<Ball>()!=null)
         {
             instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidoPortero");
-            instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-           
+            instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));        
             instance.start();
             instance.release();
+
+            if(teamN==0)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/GradasFalloGol", gradasEquipoAzul.position);
+            }
+            else if(teamN==1)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/GradasFalloGol", gradasEquipoRojo.position);
+            }
         }
     }
 }

@@ -32,10 +32,12 @@ public class FootBallPlayer : MonoBehaviour
     //Fmod
     private FMOD.Studio.EventInstance instance;
     FMODUnity.StudioListener listener;
+    FMODUnity.StudioEventEmitter emitter;
 
 
     private void Start()
     {
+        emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         listener = GetComponent<FMODUnity.StudioListener>();
         initialPos = transform.position;
         team = GameManager.getInstance().getTeam(myTeam);
@@ -49,7 +51,21 @@ public class FootBallPlayer : MonoBehaviour
         }
         else if (myTeam == Team.TeamB)
             myColor = Color.blue;
+
+        emitter.Play();
     }
+
+
+    private void OnEnable()
+    {
+        if(emitter!=null)emitter.Play();
+    }
+
+    private void OnDisable()
+    {
+        emitter.Stop();
+    }
+
     public void reset(bool back)
     {
         transform.position = initialPos;
@@ -110,7 +126,7 @@ public class FootBallPlayer : MonoBehaviour
                 timeWaiting = 0;
                 waitingForPass = false;
             }
-        }
+        }       
     }
     public void Shoot()
     {

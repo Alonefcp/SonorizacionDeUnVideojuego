@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{0570c054-0266-428d-8354-466f56fea544}">
+		<property name="assetPath">
+			<value>Jugadores/Gritos/grito9.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.56743750000000004</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{cfaccee0-c85f-4b1b-859e-c3df5c40f93e}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -72,7 +72,24 @@ public class GameManager : MonoBehaviour
     GoalKeeper goalKeeperTeamA;
     GoalKeeper goalKeeperTeamB;
     FootBallPlayer ballOwner;
+    [SerializeField] Transform gradasEquipoAzul;
+    [SerializeField] Transform gradasEquipoRojo;
 
+    float currentTime = 0f;
+    float maxTime = 70f;
+    float minTime = 40f;
+    
+
+    private void Update()
+    {
+        currentTime += Time.deltaTime;
+        if(currentTime >= Random.Range(minTime,maxTime))
+        {
+            currentTime = 0;
+            Vector3 pos = new Vector3(Random.Range(-10, 10), 27.88f, Random.Range(-5, 5));
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Canticos", pos);
+        }
+    }
 
     public void notifyGoalKeeper(Team shooterTeam)
     {
@@ -94,9 +111,18 @@ public class GameManager : MonoBehaviour
     {       
         //Al marcar la bola no está en el aire
         ball.setBallOnAir(false);
-
-        uint teamN = (uint)team;
+     
         //Se castea el equipo al que han marcado a entero y se le suma gol
+        uint teamN = (uint)team;
+        if(teamN==0) //equipo azul
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/GradasGol",gradasEquipoAzul.position);           
+          
+        }
+        else if(teamN==1) //equipo rojo
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/GradasGol", gradasEquipoRojo.position);
+        }
         goals[teamN]++;
         //Se ejecuta el sonido de cuando se marca un gol
         if (goals[teamN] < MaxGoals) FMODUnity.RuntimeManager.PlayOneShot("event:/PitidoGol");

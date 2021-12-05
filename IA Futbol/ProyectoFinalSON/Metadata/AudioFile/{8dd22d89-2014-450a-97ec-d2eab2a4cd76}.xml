@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{8dd22d89-2014-450a-97ec-d2eab2a4cd76}">
 		<property name="assetPath">
-			<value>Jugadores/kick7.wav</value>
+			<value>Jugadores/PasesYTiros/kick7.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
