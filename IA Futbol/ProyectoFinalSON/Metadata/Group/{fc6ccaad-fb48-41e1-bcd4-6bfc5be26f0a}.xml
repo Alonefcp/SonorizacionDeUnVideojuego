@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{fc6ccaad-fb48-41e1-bcd4-6bfc5be26f0a}">
+		<property name="name">
+			<value>Estadio</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{c5552a92-0a68-4005-adb3-8eb856e1d83e}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{383bcc59-0337-4953-9d4a-b50308d26a28}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{8309ebac-7ba9-4c7f-86f4-8707df63ba69}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{c5552a92-0a68-4005-adb3-8eb856e1d83e}">
+		<relationship name="effects">
+			<destination>{de2bbe1c-87cf-4453-97d6-6a089db15a67}</destination>
+			<destination>{fe6b501c-abd2-4dec-8e61-d7d9c3378173}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{383bcc59-0337-4953-9d4a-b50308d26a28}" />
+	<object class="CompressorEffect" id="{de2bbe1c-87cf-4453-97d6-6a089db15a67}">
+		<property name="threshold">
+			<value>-35</value>
+		</property>
+		<property name="ratio">
+			<value>3.5</value>
+		</property>
+		<property name="releaseTime">
+			<value>300</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{793d93a8-e952-4d30-8ff2-54e78e13c433}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{fe6b501c-abd2-4dec-8e61-d7d9c3378173}" />
+</objects>

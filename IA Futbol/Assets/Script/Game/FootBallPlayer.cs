@@ -210,12 +210,11 @@ public class FootBallPlayer : MonoBehaviour
             GameManager.getInstance().setBallOwner(this);
             timeWaiting = 0;
             waitingForPass = false;
-            //listener.enabled = true;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SonidoPortero", transform.position);
         }
         else
         {
             GameManager.getInstance().setBallOwner(null);
-            //listener.enabled = false;
         }
         myBall = ball;
     }

@@ -86,7 +86,18 @@ public class GameManager : MonoBehaviour
         if(currentTime >= Random.Range(minTime,maxTime))
         {
             currentTime = 0;
-            Vector3 pos = new Vector3(Random.Range(-10, 10), 27.88f, Random.Range(-5, 5));
+
+            float prob = Random.Range(-1, 1);
+            float posX;
+            if (prob < 0) posX = Random.Range(-10, -4);
+            else posX = Random.Range(4, 10);
+
+            prob = Random.Range(-1, 1);
+            float posY;
+            if (prob < 0) posY = Random.Range(-5, -2);
+            else posY = Random.Range(2, 5);
+
+            Vector3 pos = new Vector3(posX, 27.88f, posY);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Canticos", pos);
         }
     }
