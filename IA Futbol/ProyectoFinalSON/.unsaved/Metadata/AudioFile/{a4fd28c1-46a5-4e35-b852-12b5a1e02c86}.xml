@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{0df515f7-4a34-49b8-9b11-7ef2d9ddb2f9}">
-		<property name="assetPath">
-			<value>Estadio/estadio2.wav</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
-		</property>
+	<object class="AudioFile" id="{a4fd28c1-46a5-4e35-b852-12b5a1e02c86}">
+		<property name="assetPath" />
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>11.071020408163266</value>
+			<value>1.5468934240362813</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{cfaccee0-c85f-4b1b-859e-c3df5c40f93e}</destination>

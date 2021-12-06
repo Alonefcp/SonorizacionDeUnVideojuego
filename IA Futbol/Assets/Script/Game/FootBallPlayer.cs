@@ -210,7 +210,7 @@ public class FootBallPlayer : MonoBehaviour
             GameManager.getInstance().setBallOwner(this);
             timeWaiting = 0;
             waitingForPass = false;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SonidoPortero", transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SonidosPorteroYRecepcionPases", transform.position);
         }
         else
         {

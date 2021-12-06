@@ -42,7 +42,7 @@ public class GoalKeeper : MonoBehaviour
         //Si el portero choca con la pelota se ejecuta el sonido de parada
         if(collision.gameObject.GetComponent<Ball>()!=null)
         {
-            instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidoPortero");
+            instance = FMODUnity.RuntimeManager.CreateInstance("event:/SonidosPorteroYRecepcionPases");
             instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));        
             instance.start();
             instance.release();
