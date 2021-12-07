@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{eca0ec7c-28ee-4f1a-aeb0-15c82cfe62ea}">
+	<object class="AudioFile" id="{509e2828-dd44-4b8d-bac0-8da4bc21ec9c}">
 		<property name="assetPath">
-			<value>Jugadores/PasesYTiros/kick5.wav</value>
+			<value>Jugadores/PasesYTiros/kick7.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
 			<value>1</value>
 		</property>
 		<property name="length">
-			<value>1.1084583333333333</value>
+			<value>0.36916099773242628</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{cfaccee0-c85f-4b1b-859e-c3df5c40f93e}</destination>

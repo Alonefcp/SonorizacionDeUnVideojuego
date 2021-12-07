@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{4766c935-b429-4fd4-93d8-0463edee2825}">
+	<object class="AudioFile" id="{2c968f5f-1a17-4ea8-b9a0-24e5a7a842df}">
 		<property name="assetPath">
-			<value>Gradas/golFallado.wav</value>
+			<value>Jugadores/PasesYTiros/kick8.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
 			<value>1</value>
 		</property>
 		<property name="length">
-			<value>2.4027708333333333</value>
+			<value>0.36916099773242628</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{cfaccee0-c85f-4b1b-859e-c3df5c40f93e}</destination>
